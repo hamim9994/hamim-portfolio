@@ -493,7 +493,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 150px;
+    margin: 15rem;
 }
 
 .skills-box{
@@ -723,6 +723,78 @@ nav{
     line-height: 1.8;
 
     letter-spacing: 1px;
+}
+
+#project-gardge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20rem;
+}
+
+#project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 30px;
+}
+
+.project-card{
+    background: rgba(10,10,30,0.9);
+    border: 1px solid #00ccff44;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ccff66;
+}
+
+.project-card h2{
+    color: #00ccff;
+    margin-bottom: 15px;
+}
+
+.project-card p{
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.tags{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.tags span{
+    border: 1px solid #00ccff55;
+    color: #00ccff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: #00ccff;
+    border: 1px solid #00ccff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.buttons a:hover{
+    background: #00ccff;
+    color: black;
 }
 
 
