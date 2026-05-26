@@ -45,3 +45,11 @@ async function fetchProjects() {
 }
 
 fetchProjects();
+
+function b2_click(){
+    document.getElementById("project-gardge").scrollIntoView({behavior: "smooth"})
+}
+
+function b1_click(){
+    document.getElementById("contact-terminal").scrollIntoView({behavior: "smooth"})
+}
