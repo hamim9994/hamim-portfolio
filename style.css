@@ -1,8 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600px;
+    font-weight: 600;
     font-style: normal;
     color: aliceblue;
      
@@ -55,7 +63,7 @@ body{
 
 .c22::before,
 .c21::before,
-.c23::before
+.c23::before,
 .c24::before {
   top: -5px;
   transform-origin: left;
@@ -107,7 +115,7 @@ nav{
 }
 
 #NN {
-    font-size: 100px;
+    font-size: clamp(3rem, 10vw, 6rem);
     background: linear-gradient(90deg, #c8ecff 0%, #59c7ff 35%, #2da8ff 60%, #7b61ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -277,7 +285,8 @@ nav{
 
 .about-section{
     width: 90%;
-    height: 95vh;
+    min-height:95vh;
+    height:auto;
     margin: auto;
     padding: 20px 0;
 
@@ -493,7 +502,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15rem;
+    margin:8rem auto;
 }
 
 .skills-box{
@@ -734,7 +743,9 @@ nav{
 
 #project-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    width:90%;
+    margin:auto;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 30px;
 }
 
@@ -798,7 +809,7 @@ nav{
 }
 
 .contact-container{
-    width: 500px;
+    width:min(500px,90%);
     margin: 50px auto;
     padding: 35px;
     border: 1px solid #0b2d4d;
@@ -860,9 +871,120 @@ nav{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:700px){
+@media (max-width: 1024px){
+
+    .about-section{
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel{
+        width: 100%;
+    }
 
     .tech-grid{
         grid-template-columns: 1fr;
+    }
+
+    #project-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+
+    .headd{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .name{
+        font-size: 24px;
+    }
+
+    .titt{
+        margin: 120px 20px 50px;
+        text-align: center;
+    }
+
+    .diss{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-title{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .info-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .skills-box{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .skill-info{
+        font-size: 16px;
+    }
+
+    .contact-card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-text{
+        font-size: 16px;
+    }
+
+    .project-card{
+        padding: 20px;
+    }
+
+    #project-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px){
+
+    #NN{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about-title{
+        font-size: 36px;
+    }
+
+    .b1,
+    .b2{
+        width: 100%;
+        padding: 18px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .circle{
+        width: 140px;
+        height: 140px;
+    }
+
+    .circle span{
+        font-size: 30px;
+    }
+
+    .skill-card{
+        flex-direction: column;
+        text-align: center;
     }
 }
