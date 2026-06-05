@@ -999,6 +999,108 @@ nav{
     }
 }
 
+#arrivement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.arrivement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.arrivement-card {
+    background: rgba(0, 10, 30, 0.85);
+    border: 1px solid rgba(0, 207, 255, 0.2);
+    border-radius: 14px;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.arrivement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 24px rgba(0, 207, 255, 0.18);
+    border-color: rgba(0, 207, 255, 0.5);
+}
+
+.arrivement-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.015) 0,
+        rgba(255, 255, 255, 0.015) 1px,
+        transparent 1px,
+        transparent 5px
+    );
+    pointer-events: none;
+}
+
+.arr-icon { font-size: 38px; margin-bottom: 18px; }
+
+.arr-num {
+    font-size: 52px;
+    font-weight: 700;
+    color: #00d9ff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.arr-num sup {
+    font-size: 24px;
+    color: #66dcff;
+}
+
+.arr-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #7c8798;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.arrivement-card p {
+    font-size: 12px;
+    color: #b9c2d0;
+    line-height: 1.7;
+}
+
+.arr-badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border: 1px solid rgba(177, 0, 255, 0.4);
+    border-radius: 6px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #b100ff;
+}
+
+.arr-langs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.arr-lang {
+    padding: 5px 14px;
+    border: 1px solid rgba(0, 207, 255, 0.3);
+    border-radius: 6px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #00d9ff;
+}
+
 @media (max-width: 480px){
 
     #NN{
